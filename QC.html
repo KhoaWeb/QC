@@ -1,0 +1,49 @@
+<script type="text/javascript">
+
+  function hide_float_left() {
+  
+      var content = document.getElementById('float_content_left');
+  
+      var hide = document.getElementById('hide_float_left');
+  
+      if (content.style.display == "none")
+  
+      {content.style.display = "block"; hide.innerHTML = '<a href="javascript:hide_float_left()">Tắt quảng cáo [X]</a>'; }
+  
+          else { content.style.display = "none"; hide.innerHTML = '<a href="javascript:hide_float_left()">Xem quảng cáo...</a>';
+  
+      }
+  
+      }
+  
+  </script>
+  
+  <style>
+  
+  .float-ck { position: fixed; bottom: 0px; z-index: 900}
+  
+  * html .float-ck {position:absolute;bottom:auto;top:expression(eval (document.documentElement.scrollTop+document.docum entElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0))) ;}
+  
+  #float_content_left {border: 1px solid #01AEF0; width: 150px; height: 200px;}
+  
+  #hide_float_left {text-align:left; font-size: 11px;}
+  
+  #hide_float_left a {background: #01AEF0; padding: 2px 4px; color: #FFF;}
+  
+  </style>
+  
+  <div class="float-ck" style="left: 0px" >
+  
+      <div id="hide_float_left">
+  
+  <a href="javascript:hide_float_left()">Tắt Quảng Cáo [X]</a></div>
+  
+  <div id="float_content_left">
+  
+  <!-- Start quang cao-->
+  
+       <a href="https://sites.google.com/view/khoawebs" taget="_blank" ><img alt="Quảng cáo trên KhoaWebs" src="https://lh3.googleusercontent.com/4ns8KNRZx1w5mhLe8Zd_HxKvI-kYW_3h0mi8I4GL30-hMO6VzRMZv-5hYaTeHWHMFsIKEd3oEN75vOvEwAr8LjE=w1280"/></a>
+  
+  <!-- End quang cao -->
+  </div>
+  </div>  
